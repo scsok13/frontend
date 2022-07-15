@@ -5,13 +5,13 @@ import './App.css';
 function App() {
   const [msg, setMsg] = useState('');
 
-  // useEffect(() => {
-  //   fetch('/api/deploy')
-  //     .then((response) => response.text())
-  //     .then((msg) => {
-  //       setMsg(msg);
-  //     });
-  // });
+  useEffect(() => {
+    fetch('/api/deploy')
+      .then((response) => response.text())
+      .then((msg) => {
+        setMsg(msg);
+      });
+  });
 
   return (
     <div className="App">
